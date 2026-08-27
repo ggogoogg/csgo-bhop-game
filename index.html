@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS:GO Bunnyhopping Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            z-index: 100;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        #speed {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        
+        .control-line {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div id="speed">Speed: 0 u/s</div>
+        <div id="height">Height: 0</div>
+    </div>
+    
+    <div id="controls">
+        <div class="control-line">W/A/S/D - Move</div>
+        <div class="control-line">SPACE - Jump (Bhop)</div>
+        <div class="control-line">MOUSE - Look Around</div>
+        <div class="control-line">Mouse Click - Switch Knife Skin</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/knife.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
